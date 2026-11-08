@@ -1,0 +1,12 @@
+export type Product={id:number;name:string;category:string;price:number;image:string;tag?:string;sizes:string[];colors:string[];description:string};
+export const products:Product[]=[
+{id:1,name:'VOID PUFFER',category:'Outerwear',price:189000,image:'https://images.unsplash.com/photo-1544923246-77307dd654cb?w=900&q=85',tag:'NEW',sizes:['S','M','L','XL'],colors:['#242424','#a4a4a4'],description:'Архитектурный пуховик с объёмным силуэтом.'},
+{id:2,name:'CHROME HOODIE',category:'Tops',price:89000,image:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=900&q=85',sizes:['S','M','L'],colors:['#303030','#e3e0d9'],description:'Худи с выразительной формой и мягкой фактурой.'},
+{id:3,name:'PARALLEL DENIM',category:'Bottoms',price:115000,image:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=900&q=85',tag:'BESTSELLER',sizes:['S','M','L','XL'],colors:['#404f68','#292929'],description:'Свободный деним для движения.'},
+{id:4,name:'MONO TEE',category:'Tops',price:49000,image:'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=900&q=85',sizes:['S','M','L'],colors:['#f2eee8','#141414'],description:'Минималистичная футболка на каждый день.'},
+{id:5,name:'SPECTRUM COAT',category:'Outerwear',price:219000,image:'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=900&q=85',tag:'LIMITED',sizes:['S','M','L'],colors:['#4a453e','#171717'],description:'Удлинённое пальто с чистой линией плеч.'},
+{id:6,name:'AXIS TROUSERS',category:'Bottoms',price:109000,image:'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=900&q=85',sizes:['S','M','L','XL'],colors:['#292929','#b9b0a1'],description:'Универсальные брюки свободного кроя.'},
+{id:7,name:'ORBIT CAP',category:'Accessories',price:35000,image:'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=900&q=85',sizes:['ONE SIZE'],colors:['#171717','#a3a3a3'],description:'Кепка с графичным силуэтом.'},
+{id:8,name:'FRAME BAG',category:'Accessories',price:79000,image:'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=85',sizes:['ONE SIZE'],colors:['#171717','#ded2c2'],description:'Сумка для города и за его пределами.'}
+];
+export const money=(n:number)=>new Intl.NumberFormat('ru-RU').format(n)+' сум';
