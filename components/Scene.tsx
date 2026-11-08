@@ -1,0 +1,7 @@
+'use client';
+import {Canvas,useFrame} from '@react-three/fiber';
+import {Float,OrbitControls} from '@react-three/drei';
+import {useRef} from 'react';
+import * as THREE from 'three';
+function Sculpture(){const group=useRef<THREE.Group>(null);useFrame((state,delta)=>{if(group.current){group.current.rotation.y+=delta*.12;group.current.rotation.x=THREE.MathUtils.lerp(group.current.rotation.x,state.pointer.y*.16,.025)}});return <group ref={group}><Float speed={1.6} rotationIntensity={.2} floatIntensity={.35}><mesh rotation={[.25,.2,.3]}><torusKnotGeometry args={[1.3,.39,220,28,2,5]}/><meshPhysicalMaterial color="#c6ff43" metalness={.78} roughness={.13} clearcoat={1} clearcoatRoughness={.08}/></mesh><mesh scale={.55}><icosahedronGeometry args={[1,2]}/><meshStandardMaterial color="#151515" metalness={.85} roughness={.18}/></mesh></Float></group>}
+export default function Scene(){return <div className="canvasWrap"><Canvas camera={{position:[0,0,6],fov:43}} dpr={[1,1.75]} gl={{antialias:true,alpha:true}}><ambientLight intensity={1.4}/><spotLight position={[5,7,5]} intensity={100} color="#e5ffad"/><pointLight position={[-5,-2,3]} intensity={55} color="#8f92ff"/><Sculpture/><OrbitControls enableZoom={false} enablePan={false}/></Canvas></div>}
