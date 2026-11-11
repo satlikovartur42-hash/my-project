@@ -1,0 +1,1 @@
+import './style.css';export const metadata={title:'NEXORA CRYPTO',description:'Crypto market intelligence'};export default function RootLayout({children}){return <html lang='ru'><body>{children}</body></html>}

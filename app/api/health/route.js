@@ -1,0 +1,1 @@
+export async function GET(){return Response.json({status:'ok',botConfigured:!!process.env.TELEGRAM_BOT_TOKEN})}
